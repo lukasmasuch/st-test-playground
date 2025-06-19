@@ -26,6 +26,21 @@ html_content_2 = f"""
     type="application/pdf"
     frameborder="0"
 ></iframe>
+
+<object 
+    data="app/static/sample.pdf" 
+    type="application/pdf" 
+    width="100%" 
+    height="500px">
+    <p>Your browser does not support PDFs. 
+       <a href="app/static/sample.pdf">Download the PDF</a>.</p>
+</object>
+
+<embed 
+    src="app/static/sample.pdf" 
+    type="application/pdf" 
+    width="100%" 
+    height="500px">
 """
 
 st.markdown(html_content_2, unsafe_allow_html=True)
