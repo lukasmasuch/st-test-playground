@@ -1,10 +1,18 @@
 import streamlit as st
-from streamlit_extras.pdf_viewer import pdf_viewer
+
 st.title("🎈 My new app")
 st.write(
     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
 )
 
-pdf_viewer(
-        "https://pdfobject.com/pdf/sample.pdf",
-    )
+
+html_content = f"""
+<iframe
+    src= "https://pdfobject.com/pdf/sample.pdf",
+    style="width: 100%; height: 500px"
+    type="application/pdf"
+    frameborder="0"
+></iframe>
+"""
+
+st.markdown(html_content, unsafe_allow_html=True)
